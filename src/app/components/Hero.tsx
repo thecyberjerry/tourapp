@@ -1,6 +1,5 @@
 import React from 'react'
 import Heading1 from './minicomponents/Heading1'
-import Paragraph from './minicomponents/Paragraph'
 import Button from './minicomponents/Button'
 import CustomText from './minicomponents/Text'
 import Tabs from './minicomponents/Tabs'

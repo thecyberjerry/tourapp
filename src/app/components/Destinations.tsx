@@ -1,5 +1,5 @@
 "use client"
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import Heading2 from './minicomponents/Heading2'
 import Paragraph from './minicomponents/Paragraph'

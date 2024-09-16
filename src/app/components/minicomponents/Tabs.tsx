@@ -14,7 +14,7 @@ export default function Tabs() {
             fetch(`https://nominatim.openstreetmap.org/search?q=${value}&format=json`).then((response) => { return response.json() }).then((data) => {
                 data.length === 0 ? settoggle(false) : settoggle(true);
                 return setcity(data)
-            }).catch((e) => {
+            }).catch(() => {
                 toast.error("Some Error Occured", {
                     hideProgressBar: true,
                     position: "top-right",
