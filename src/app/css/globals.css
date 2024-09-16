@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url("./fonts/clash-display/css/clash-display.css");
+  @import url("./fonts/Helvetica Now Display/helvetice-now-display.css");
+
+  /* Partials */
+  @import url("partials/variables.css");
+  @import url("partials/resets.css");
+}
+@layer components {
+  .container {
+    @apply mx-auto;
+    max-width: 1168px;
+  }
+  h1 {
+    @apply font-clashdisplay font-semibold text-extraLarge leading-extraLarge text-balance;
+  }
+  h2 {
+    @apply font-clashdisplay font-semibold text-largeHeading leading-large text-balance;
+  }
+  h3 {
+    @apply font-clashdisplay font-semibold text-heading leading-heading text-balance;
+  }
+  p {
+    @apply font-helvetice text-body leading-body ;
+  }
+}
+.slick-prev {
+  left: 0.5rem !important;
+  z-index: 1 !important;
+  transform: scale(1.5) !important;
+}
+.slick-next {
+  right: 0.5rem !important;
+  transform: scale(1.5) !important;
+}
+.slick-prev::before {
+  color: var(--color-accent-2) !important;
+}
+.slick-next::before {
+  color: var(--color-accent-2) !important;
+}
