@@ -12,11 +12,11 @@
 }
 @layer components {
   .container {
-    @apply mx-auto;
+    @apply mx-auto px-5;
     max-width: 1168px;
   }
   h1 {
-    @apply font-clashdisplay font-semibold text-extraLarge leading-extraLarge text-balance;
+    @apply font-clashdisplay font-semibold text-largeHeading md:text-extraLarge leading-large md:leading-extraLarge text-balance;
   }
   h2 {
     @apply font-clashdisplay font-semibold text-largeHeading leading-large text-balance;
@@ -25,7 +25,10 @@
     @apply font-clashdisplay font-semibold text-heading leading-heading text-balance;
   }
   p {
-    @apply font-helvetice text-body leading-body ;
+    @apply font-helvetice text-body leading-body;
+  }
+  label {
+    @apply font-manrope font-bold text-body leading-body text-foreground;
   }
 }
 .slick-prev {
@@ -42,4 +45,28 @@
 }
 .slick-next::before {
   color: var(--color-accent-2) !important;
+}
+
+/* Define the animation keyframes for zooming in and out */
+@keyframes zoomInOut {
+  0% {
+    background-image: url("/assets/images/hero/hero.webp");
+    background-size: 100% 100%;
+  }
+  50% {
+    background-image: url("/assets/images/hero/hero2.webp");
+    background-size: 150% 150%;
+  }
+  100% {
+    background-image: url("/assets/images/hero/hero.webp");
+    background-size: 100% 100%;
+  }
+}
+
+.hero {
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: zoomInOut 10s infinite;
+  transition: background-size 5s, background-image 5s;
+  animation-iteration-count: infinite;
 }

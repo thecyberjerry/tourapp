@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      transitionProperty: {
+        height: "height",
+      },
       aspectRatio: {
         "3/2": "3 / 2",
         "22/17": "22 / 17",

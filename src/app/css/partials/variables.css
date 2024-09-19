@@ -1,6 +1,6 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #3d3d3d;
 
   /* Colors */
   --color-primary: #feea39;
@@ -14,12 +14,12 @@
   --color-background-light: #fefcc3;
   --color-white: #ffffff;
   --color-rich-brown: #724511;
-  --color-lightgray: #f6f6f6; 
+  --color-lightgray: #f6f6f6;
+
   /* Fonts */
   --font-primary: "Clash Display";
   --font-secondary: "Helvetice Now Display";
   --font-tertiary: var(--font-tertiary);
-
 
   /* Font Sizes */
   --font-size-tiny: 12px;

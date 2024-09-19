@@ -6,16 +6,14 @@ import Paragraph from './minicomponents/Paragraph'
 import Destinationcard from './minicomponents/Destinationcard'
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-export default function Destinations() {
-    const title = "Explore our top destinations."
-    const para = "Dive into the allure of iconic destinations around the globe and uncover new adventures waiting to be explored. From bustling cityscapes to serene beaches, each destination offers a unique experience for every traveler.";
+export default function Destinations({ destinationdata }: any) {
     const settings = {
         dots: true,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 2000,
+        speed: 1000,
         cssEase: "linear",
         responsive: [
             {
@@ -43,25 +41,23 @@ export default function Destinations() {
     return (
         <div data-aos="fade-up" className='container mt-40'>
             <div className="textcontent text-center flex flex-col gap-7">
-                <Heading2 heading={{ title: title, color: "text-black" }} />
-                <div className="paragraph max-w-[43.75rem] mx-auto">
-                    <Paragraph paragraph={{ title: para, color: "text-neutralmediumlight", size: "font-body" }} />
-                </div>
+                {destinationdata && destinationdata?.heading && <Heading2 heading={{ title: destinationdata?.heading?.title, color: destinationdata?.heading?.color }} />}
+                {
+                    destinationdata && destinationdata?.para &&
+                    <div className="paragraph max-w-[43.75rem] mx-auto">
+                        <Paragraph paragraph={{ title: destinationdata?.para?.title, color: destinationdata?.para?.color, size: destinationdata?.para?.size }} />
+                    </div>
+                }
             </div>
 
             <Slider {...settings}>
-                <div className="py-8">
-                    <Destinationcard title="Sometitle" />
-                </div>
-                <div className="py-8">
-                    <Destinationcard title="Sometitle2" />
-                </div>
-                <div className="py-8">
-                    <Destinationcard title="Sometitle3" />
-                </div>
-                <div className="py-8">
-                    <Destinationcard title="Sometitle3" />
-                </div>
+                {destinationdata && destinationdata?.slider?.map((item: any, index: number) => {
+                    return (
+                        <div key={index} className="py-8">
+                            <Destinationcard destinationcarddata={item} />
+                        </div>
+                    )
+                })}
             </Slider>
         </div>
     )

@@ -10,7 +10,12 @@ import { useEffect } from "react";
 import AOS from 'aos';
 import Trips from "./components/Trips";
 import Flights from "./components/Flights";
-
+import Newsletter from "./components/Newsletter";
+import Footer from "./components/Footer";
+import Ratedtrip from "./components/Ratedtrip";
+import Insights from "./components/Insights";
+import Happytraveller from "./components/Happytraveller";
+import { logo, navbar, aboutus, destination, flights, newsletter, northside, ratedtrip, partners } from "./data/data";
 export default function Home() {
 
   useEffect(() => {
@@ -19,14 +24,19 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+      <Navbar navdata={navbar} logo={logo} />
       <Hero />
-      <Partners />
-      <Destinations />
-      <Aboutus />
-      <Northside />
+      <Partners partnersdata={partners} />
+      <Happytraveller />
+      <Destinations destinationdata={destination} />
+      <Aboutus aboutusdata={aboutus} />
+      <Insights />
+      <Ratedtrip ratedtripdata={ratedtrip} />
+      <Northside northsidedata={northside} />
       <Trips />
-      <Flights />
+      <Flights flightsdata={flights} />
+      <Newsletter newsletterdata={newsletter} />
+      <Footer />
     </>
   );
 }

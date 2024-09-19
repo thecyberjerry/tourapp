@@ -5,7 +5,7 @@ export default function Heading3({ heading }: Heading) {
     return (
         <div>
             {heading &&
-                <h3 className={`${heading && heading?.color ? heading?.color : "text-white"} break-all`}>{heading && heading?.title}</h3>}
+                <h3 className={`${heading && heading?.color ? heading?.color : "text-white"} break-normal`}>{heading && heading?.title}</h3>}
         </div>
     )
 }

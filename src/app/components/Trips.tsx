@@ -11,7 +11,7 @@ export default function Trips() {
         <div className='bg-secondary mt-40 [&>*]:mx-auto '>
             <div data-aos="fade-up" className="container sm:flex sm:flex-row-reverse  py-20 gap-20">
                 <div className='imgwrapper w-full  my-auto'>
-                    <Image className='aspect-square w-full object-cover object-center' src={"/assets/images/trip/trip.png"} height={100} width={100} alt='Some Image' />
+                    <Image unoptimized className='aspect-square w-full object-cover object-center' src={"/assets/images/trip/trip.png"} height={100} width={100} alt='Some Image' />
                 </div>
                 <div className="textcontent gap-5 flex flex-col w-full ">
                     <div className="textcontent__upper flex flex-col gap-7">
@@ -31,7 +31,6 @@ export default function Trips() {
                             </div>
                             <div className="list-text">
                                 <CustomText text={{ title: "Browse and Select", weight: "font-bold", size: "text-body", color: "text-neutralmediumdark" }} />
-                                {/*  */}
                                 <div className="listpara max-w-[36.5rem]">
                                     <CustomText text={{ title: list, weight: "font-normal", size: "text-smallbody", color: "text-neutralmediumdark" }} />
                                 </div>
@@ -45,7 +44,6 @@ export default function Trips() {
                             </div>
                             <div className="list-text">
                                 <CustomText text={{ title: "Browse and Select", weight: "font-bold", size: "text-body", color: "text-neutralmediumdark" }} />
-                                {/*  */}
                                 <div className="listpara max-w-[36.5rem]">
                                     <CustomText text={{ title: list, weight: "font-normal", size: "text-smallbody", color: "text-neutralmediumdark" }} />
                                 </div>
@@ -59,7 +57,6 @@ export default function Trips() {
                             </div>
                             <div className="list-text">
                                 <CustomText text={{ title: "Browse and Select", weight: "font-bold", size: "text-body", color: "text-neutralmediumdark" }} />
-                                {/*  */}
                                 <div className="listpara max-w-[36.5rem]">
                                     <CustomText text={{ title: list, weight: "font-normal", size: "text-smallbody", color: "text-neutralmediumdark" }} />
                                 </div>
@@ -73,7 +70,6 @@ export default function Trips() {
                             </div>
                             <div className="list-text">
                                 <CustomText text={{ title: "Browse and Select", weight: "font-bold", size: "text-body", color: "text-neutralmediumdark" }} />
-                                {/*  */}
                                 <div className="listpara max-w-[36.5rem]">
                                     <CustomText text={{ title: list, weight: "font-normal", size: "text-smallbody", color: "text-neutralmediumdark" }} />
                                 </div>
